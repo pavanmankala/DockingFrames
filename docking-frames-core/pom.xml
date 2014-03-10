@@ -14,33 +14,6 @@
 	<name>${project.artifactId}</name>
 	<description>${project.name} is a core library</description>
 
-        <build>
-            <sourceDirectory>
-                src/
-            </sourceDirectory>
-            <resources>
-                <resource>
-                    <directory>
-                        src/
-                    </directory>
-                    <includes>
-                        <include>
-                            data/**/*.properties
-                        </include>
-                        <include>
-                            data/**/*.png
-                        </include>
-                        <include>
-                            data/**/*.ini
-                        </include>
-                        <include>
-                            data/**/*.svg
-                        </include>
-                    </includes>
-                </resource>
-            </resources>
-        </build>
-
     <profiles>
         <profile>
             <activation>
@@ -82,17 +55,17 @@
                     <plugin>
                         <groupId>org.codehaus.mojo</groupId>
                         <artifactId>build-helper-maven-plugin</artifactId>
-                        <version>1.7</version>
+                        <version>1.8</version>
                         <executions>
                             <execution>
-                                <id>add-source</id>
+                                <id>add-java6-source</id>
                                 <phase>generate-sources</phase>
                                 <goals>
                                     <goal>add-source</goal>
                                 </goals>
                                 <configuration>
                                     <sources>
-                                        <source>src-j6</source>
+                                        <source>src/main/src-j6</source>
                                     </sources>
                                 </configuration>
                             </execution>
