@@ -17,26 +17,7 @@
   <properties>
     <javaVersion>1.6</javaVersion>
   </properties>
-  <build>
-      <sourceDirectory>
-          src/
-      </sourceDirectory>
-    <resources>
-        <resource>
-            <directory>
-                src
-            </directory>
-            <includes>
-                <include>
-                    data/**/*.*
-                </include>
-            </includes>
-        </resource>
-    </resources>
-    <testSourceDirectory>
-       testing
-    </testSourceDirectory>
-  </build>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
