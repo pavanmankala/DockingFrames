@@ -29,5 +29,11 @@
 			<version>${project.version}</version>
 			<scope>compile</scope>
 		</dependency>
+        <dependency>
+            <groupId>org.dockingframes</groupId>
+            <artifactId>docking-frames-demo-app-ice</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
 	</dependencies>
 </project>

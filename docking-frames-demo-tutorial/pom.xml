@@ -18,21 +18,6 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   <build>
-      <sourceDirectory>
-          src/
-      </sourceDirectory>
-    <resources>
-        <resource>
-            <directory>
-                src
-            </directory>
-            <includes>
-                <include>
-                    data/**/*.*
-                </include>
-            </includes>
-        </resource>
-    </resources>
     <plugins>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
