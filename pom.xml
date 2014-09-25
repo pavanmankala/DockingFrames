@@ -47,9 +47,9 @@
 	</organization>
 
 	<scm>
-		<url>https://github.com/Benoker/DockingFrames</url>
-		<connection>scm:git:git://github.com/Benoker/DockingFrames.git</connection>
-		<developerConnection>scm:git:git@github.com:Benoker/DockingFrames.git</developerConnection>
+		<url>https://github.com/pavanmankala/DockingFrames</url>
+		<connection>scm:git:git://github.com/pavanmankala/DockingFrames.git</connection>
+		<developerConnection>scm:git:[fetch=]https://github.com/pavanmankala/DockingFrames[push=]git://git@github.com:pavanmankala/DockingFrames.git</developerConnection>
 	</scm>
 
 	<licenses>
