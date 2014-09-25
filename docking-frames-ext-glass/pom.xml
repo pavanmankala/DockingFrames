@@ -8,7 +8,6 @@
 		<artifactId>docking-frames-base</artifactId>
 		<version>1.1.1-SNAPSHOT</version>
 	</parent>
-
 	<artifactId>docking-frames-ext-glass</artifactId>
 	<packaging>jar</packaging>
 
@@ -16,7 +15,6 @@
 	<description>${project.name} is a "glass" theme extension</description>
 
 	<dependencies>
-
 		<dependency>
 			<groupId>org.dockingframes</groupId>
 			<artifactId>docking-frames-common</artifactId>
@@ -24,10 +22,17 @@
 			<version>${project.version}</version>
 			<scope>compile</scope>
 		</dependency>
-
-		<!-- TODO ask Steffen Kux, software@kuxfamily.de to publish glasslib.jar
-			on maven -->
-
+		<dependency>
+			<groupId>glasslib</groupId>
+			<artifactId>glasslib</artifactId>
+			<version>1.0</version>
+		</dependency>
 	</dependencies>
 
+	<repositories>
+		<repository>
+			<id>my-local-repo</id>
+			<url>file://${basedir}/libs/local-repo</url>
+		</repository>
+	</repositories>
 </project>
