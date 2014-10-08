@@ -65,7 +65,7 @@ public class ScreenDockFrame extends AbstractScreenDockWindow {
         
         frame.setDefaultCloseOperation( JDialog.DO_NOTHING_ON_CLOSE );
         
-        init( frame, frame.getContentPane(), configuration, undecorated );
+        init( frame, frame.getContentPane(), configuration, false );
         
         if( configuration.isTransparent() ){
         	Workarounds.getDefault().makeTransparent( frame );

@@ -5,6 +5,7 @@ import java.awt.Color;
 import javax.swing.JPanel;
 
 import bibliothek.gui.dock.common.DefaultSingleCDockable;
+import bibliothek.gui.dock.common.action.CButton;
 
 public class ColorSingleCDockable extends DefaultSingleCDockable{
 	private JPanel panel = new JPanel();

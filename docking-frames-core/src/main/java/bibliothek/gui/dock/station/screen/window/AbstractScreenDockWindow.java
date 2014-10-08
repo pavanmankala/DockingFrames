@@ -75,10 +75,10 @@ import bibliothek.gui.dock.util.Transparency;
  */
 public abstract class AbstractScreenDockWindow extends DisplayerScreenDockWindow{
     /** the component which represents the window */
-    private Component window;
+    protected Component window;
 
     /** the elements to display */
-    private DockableDisplayer displayer;
+    protected DockableDisplayer displayer;
 
     /** the parent of {@link #displayer}, used to paint */
     private SecureContainer content;

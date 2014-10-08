@@ -209,11 +209,11 @@ public class AbstractDockTitle extends AbstractMultiDockTitle {
             	int buttonWidth = buttonPreferred[count].width;
             	int buttonX = width - buttonWidth;
             	
-                label.setBounds( x, y, buttonX, height );
+                label.setBounds( x, y, Math.min(labelPreferred.width, buttonX), height );
                 itemPanel.setBounds( x + buttonX, y, width - buttonX, height );
             }
             else
-                label.setBounds( x, y, width, height );
+                label.setBounds( x, y, Math.min(labelPreferred.width, width), height );
         }
         else{
             if( icon != null ){
@@ -368,5 +368,9 @@ public class AbstractDockTitle extends AbstractMultiDockTitle {
         }
         
         super.unbind();
+    }
+
+    public ButtonPanel getItemPanel() {
+        return itemPanel;
     }
 }

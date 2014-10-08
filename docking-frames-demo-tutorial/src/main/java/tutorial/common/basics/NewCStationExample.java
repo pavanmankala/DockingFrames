@@ -169,6 +169,11 @@ public class NewCStationExample {
 				getStation().move( dockable, location );
 			}
 			else{
+				boolean acceptable = DockUtilities.acceptable( getStation(), dockable );
+				if( !acceptable ){
+					return;
+				}
+				
 				if( !getStation().drop( dockable, location )){
 					getStation().drop( dockable );
 				}
@@ -187,7 +192,7 @@ public class NewCStationExample {
 		public boolean autoDefaultArea(){
 			return true;
 		}
-
+		
 		public boolean isChild( Dockable dockable ){
 			return dockable.getDockParent() == getStation();
 		}

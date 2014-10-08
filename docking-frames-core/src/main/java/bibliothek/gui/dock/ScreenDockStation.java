@@ -934,6 +934,14 @@ public class ScreenDockStation extends AbstractDockStation {
         dropInfo.titleY = item.getTitleY();
         dropInfo.dockable = item.getDockable();
         dropInfo.move = !drop;
+
+        if (dropInfo.dockable != null && dropInfo.dockable.getDockParent()!= null) {
+            for (DockableDisplayer  disp : dropInfo.dockable.getDockParent().getDisplayers()) {
+                if (dropInfo.dockable == disp.getDockable() && disp.getTitle() != null) {
+                    dropInfo.titleSize  = disp.getComponent().getSize();
+                }
+            }
+        }
         
         Enforcement force = Enforcement.HARD;
         dropInfo.combine = searchCombineDockable( dropInfo.x, dropInfo.y, dropInfo.dockable, true );
@@ -2169,6 +2177,7 @@ public class ScreenDockStation extends AbstractDockStation {
      * as possible parent.
      */
     private class DropInfo implements CombinerSource, StationDropOperation{
+        public Dimension titleSize;
         /** The Dockable which is dragged */
         public Dockable dockable;
         /** Location of the mouse */
@@ -2298,7 +2307,7 @@ public class ScreenDockStation extends AbstractDockStation {
 	        }
 	        else{
 	            Dimension size = dropSizeStrategy.getValue().getDropSize( ScreenDockStation.this, dockable );
-	            Rectangle bounds = new Rectangle( titleX, titleY, size.width, size.height );
+	            Rectangle bounds = new Rectangle( titleX, titleY, Math.max(size.width, titleSize.width), titleSize.height );
 	            addDockable( dockable, bounds, false );
 	        }
 	    }

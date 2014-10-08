@@ -176,6 +176,12 @@ public class CombinerExample {
 	        stack.drop( source.getNew() );
 	        
 	        return stack;
-	    }		
+	    }
+		
+		/* This method would be used to put a Dockable "aside" another dockable, but we do ignore 
+		 * it in this example. */
+		//public void aside( AsideRequest request ){
+			// ignore	
+		//}
 	}
 }

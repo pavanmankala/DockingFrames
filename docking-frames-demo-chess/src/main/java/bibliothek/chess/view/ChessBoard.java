@@ -788,4 +788,9 @@ public class ChessBoard extends OverpaintablePanel implements DockStation, Chess
 			}
         }
 	}
+
+	   @Override
+	    public DisplayerCollection getDisplayers() {
+	        return displayerCollection;
+	    }
 }

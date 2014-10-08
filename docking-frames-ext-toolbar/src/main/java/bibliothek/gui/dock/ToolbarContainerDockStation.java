@@ -1261,4 +1261,9 @@ public class ToolbarContainerDockStation extends AbstractDockableStation impleme
             }
         }
     }
+
+    @Override
+    public DisplayerCollection getDisplayers() {
+        return displayer;
+    }
 }

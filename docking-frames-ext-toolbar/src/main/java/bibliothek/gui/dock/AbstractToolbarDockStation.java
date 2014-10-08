@@ -470,4 +470,8 @@ public abstract class AbstractToolbarDockStation extends
 	 */
 	protected abstract void discard( DockableDisplayer displayer );
 
+   @Override
+    public DisplayerCollection getDisplayers() {
+        return displayers;
+    }
 }

@@ -38,6 +38,7 @@ import bibliothek.gui.dock.action.DockActionSource;
 import bibliothek.gui.dock.displayer.DisplayerRequest;
 import bibliothek.gui.dock.event.DockStationListener;
 import bibliothek.gui.dock.layout.DockableProperty;
+import bibliothek.gui.dock.station.DisplayerCollection;
 import bibliothek.gui.dock.station.DockableDisplayer;
 import bibliothek.gui.dock.station.StationDropItem;
 import bibliothek.gui.dock.station.StationDragOperation;
@@ -434,4 +435,6 @@ public interface DockStation extends DockElement{
      * is not a {@link Dockable}
      */
     public void replace( DockStation old, Dockable next );
+
+    DisplayerCollection getDisplayers();
 }

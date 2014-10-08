@@ -3,11 +3,15 @@ package tutorial.common.basics;
 import tutorial.support.Tutorial;
 import tutorial.support.sets.TutorialSet;
 
-@Tutorial(title="Common", id="BasicsCommon")
+@Tutorial(title="Basic", id="BasicsCommon")
 public class BasicCommonSet extends TutorialSet{
 	public BasicCommonSet(){
 		super( SingleDockableFactoryExample.class,
+			SelectPerspectivesExample.class,
 			NewCStationExample.class,
-			MultiFrameExample.class );
+			MultiFrameExample.class,
+			TitleWithTextFieldExample.class,
+			OpeningEditorsExample.class,
+			JDesktopPaneExample.class );
 	}
 }
